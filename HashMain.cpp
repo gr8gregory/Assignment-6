@@ -28,7 +28,10 @@ int main(void) {
 	int* quoteLen;				// array holding quote lengths
 	int quote;					// error code for GetMessageFromFile
 	Item found;					// used to search for a specific message
-	char HashTable[NODES];
+	char HashTable[NUMNODES];
+
+	int iMsgList[NUMNODES];				// message list array
+	int iHashTab[HASHVAL];					// hash table
 
 
 	/*
@@ -53,6 +56,8 @@ int main(void) {
 		quote = GetMessageFromFile(p->buff, 140, frandNum(1, fileCount), fileCount, fileIndices, quoteLen);
 		p->Hash = HashKey(p->buff, 29);
 		HashTable[i] = p->Hash;
+		
+		HashColl(i, p->Hash, iMsgList, iHashTab);
 
 		Insert(*p);						// Creates a node with the message quote as the buffer
 	}
@@ -63,6 +68,7 @@ int main(void) {
 
 
 	TestHash(HashTable);
+
 
 
 
