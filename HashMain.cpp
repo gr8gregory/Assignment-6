@@ -63,13 +63,11 @@ int main(void) {
 	}
 
 	// Print the BST Inorder
-	printf("\nPrinting the BST Inorder************************************\n");
-	BSTPrint(getRoot());		// Passes in a pointer to the root node and prints the nodes of the tree in order
+	//printf("\nPrinting the BST Inorder************************************\n");
+	//BSTPrint(getRoot());		// Passes in a pointer to the root node and prints the nodes of the tree in order
 
 
 	TestHash(HashTable);
-
-
 
 
 	//printf("\nThe total number of nodes in the tree is: %d\n", count(getRoot()) - 1);// Counts the number of nodes in the tree
